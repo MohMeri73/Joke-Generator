@@ -146,8 +146,8 @@ table {
   width: 50%;
   height: 40vh;
 }
-.container p {
-  font-family: Shabnam;
+.container span {
+  font-family: Shabnam, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   width: auto;
   height: 5vh;
   display: flex;
@@ -155,10 +155,8 @@ table {
   align-items: center;
   margin-top: 20px;
 }
-.input {
-  direction: ltr;
-}
 #btn {
+  direction: ltr;
   font-family: cursive;
   display: block;
   background-color: #c24d09;
@@ -167,17 +165,24 @@ table {
   font-size: 18px;
   color: #ececec;
   padding: 15px 50px;
-  margin: 150px auto;
+  margin: 50px auto;
   border-radius: 5px;
   cursor: pointer;
   outline: none;
 }
-.joke-section {
+#joke-section {
+  background-color: azure;
+  color: black;
   font-size: 16px;
+  box-shadow: 0 0 20px rgba(0, 139, 253, 0.28);
   font-weight: 400;
   text-align: center;
   word-wrap: break-word;
   line-height: 35px;
   margin: 30px 0;
   opacity: 0;
+}
+.fade {
+  opacity: 1;
+  transition: opacity 0.1s;
 }
