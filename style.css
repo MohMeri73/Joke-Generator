@@ -131,7 +131,12 @@ table {
   src: url(./assets/font/Shabnam.eot);
   src: url(./assets/font/Shabnam.ttf);
 }
-#main {
+@font-face {
+  font-family: "Minimalist";
+  src: url(./assets/font/Creating\ Minimalist.ttf);
+  src: url(./assets/font/Creating\ Minimalist.otf);
+}
+body {
   direction: rtl;
   background-color: darkkhaki;
   width: 100%;
@@ -142,20 +147,48 @@ table {
 .container {
   background-color: darkorange;
   border-radius: 20px;
-  margin: 0 auto;
+  position: absolute;
+  transform: translate(-50%, 0%);
   width: 50%;
-  height: 40vh;
+  height: 80vh;
+  box-shadow: 5px 5px 15px 5px rgba(97, 63, 0, 0.4);
 }
-.container span {
+span {
+  direction: ltr;
   font-family: Shabnam, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  display: block;
   width: auto;
   height: 5vh;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 20px;
+  font-weight: 800;
 }
-#btn {
+p {
+  font-family: Minimalist;
+  direction: ltr;
+  font-size: 18px;
+  background-color: rgb(201, 146, 64);
+  box-shadow: 0 0 20px rgba(7, 41, 68, 0.28);
+  font-weight: 400;
+  text-align: center;
+  word-wrap: break-word;
+  line-height: 35px;
+  margin: 20px;
+  opacity: 0;
+}
+#loading {
+  width: 2rem;
+  height: 2rem;
+  border: 5px solid #f3f3f3;
+  border-top: 6px solid #2b0fca;
+  border-radius: 100%;
+  margin: auto;
+  visibility: hidden;
+  animation: spin 1s infinite linear;
+}
+button {
   direction: ltr;
   font-family: cursive;
   display: block;
@@ -165,24 +198,26 @@ table {
   font-size: 18px;
   color: #ececec;
   padding: 15px 50px;
-  margin: 50px auto;
+  margin: 200px auto;
   border-radius: 5px;
   cursor: pointer;
   outline: none;
+  box-shadow: 5px 5px 15px 5px rgba(97, 63, 0, 0.4);
 }
-#joke-section {
-  background-color: azure;
-  color: black;
-  font-size: 16px;
-  box-shadow: 0 0 20px rgba(0, 139, 253, 0.28);
-  font-weight: 400;
-  text-align: center;
-  word-wrap: break-word;
-  line-height: 35px;
-  margin: 30px 0;
-  opacity: 0;
-}
+
 .fade {
   opacity: 1;
   transition: opacity 0.1s;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+#loading.display {
+  visibility: visible;
 }
